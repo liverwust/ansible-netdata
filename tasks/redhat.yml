@@ -3,6 +3,7 @@
   yum:
     name: git
     state: present
+  become: true
 
 - name: redhat | Check if EPEL repo is already configured.
   stat: path={{ netdata_epel_repofile_path }}
